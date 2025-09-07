@@ -26,7 +26,7 @@ Follow the steps below to run the project locally:
 
 ## 1. Clone the repository
 ```bash
-git clone https://github.com/<username>/thientruc-website.git
+git clone https://github.com/Donavfulish/thientruc-website.git
 cd thientruc-website
 ```
 
