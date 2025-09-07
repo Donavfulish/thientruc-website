@@ -24,24 +24,32 @@ Built with:
 
 Follow the steps below to run the project locally:
 
+## 1. Clone the repository
 ```bash
-# 1. Clone the repository
 git clone https://github.com/<username>/thientruc-website.git
 cd thientruc-website
+```
 
-# 2. Environment variables
-# Contact flazerfa123@gmail.com to request the sample .env file.
-# (Optional) You can run the project without .env, but only the interface will be visible without sample data.
+## 2. Environment variables
+   Contact flazerfa123@gmail.com to request the sample .env file.
+  (Optional) You can run the project without .env, but only the interface will be visible without sample data.
 
-# 3. Install dependencies
+## 3. Install dependencies
+```bash
 npm install
 ```
+
+## 4. Run the project
+```bash
+npm run dev
+```
+
 The project should now be running on your local environment.
+
 ## For any questions or support, please contact:
 📧 flazerfa123@gmail.com
 
 ## This project is intended for Thiên Trúc Company.
 All rights reserved © 2025.
 
-# 4. Run the project
-npm run dev
+
