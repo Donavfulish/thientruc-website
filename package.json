@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "install": "concurrently \"npm install --prefix client\" \"npm install --prefix admin\" \"npm install --prefix server\"",
+    "start": "vite",
+    "dev:server": "npx dotenv -e .env -- nodemon server/src/server.js",
+    "dev:client": "concurrently \"npm run dev:server\" \"npm run dev --prefix client\"",
+    "dev:admin": "concurrently \"npm run dev:server\" \"npm run dev --prefix admin\"",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev --prefix client\" \"npm run dev --prefix admin\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start:server": "npx dotenv -e .env -- node server/src/server.js",
+    "preview:client": "npm run preview --prefix client -- --port 3002 --host",
+    "preview:admin": "npm run preview --prefix admin -- --port 3001 --host",
+    "start:prod": "concurrently \"npm run start:server\" \"npm run preview:client\" \"npm run preview:admin\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "dotenv-cli": "^10.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "nodemon": "^3.1.10",
+    "prop-types": "^15.8.1",
+    "react-helmet": "^6.1.0",
+    "vite": "^7.0.6"
+  }
+}

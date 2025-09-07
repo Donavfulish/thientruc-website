@@ -1,0 +1,67 @@
+@import "tailwindcss";
+/* Container giống Bootstrap */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;   
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+/* Màu chủ đạo */
+:root {
+  --green-bg: #16A34A;
+  --dark-blue: #14532D;
+  --yellow-bg: #FFC107;
+  --gradient-banner: linear-gradient(90deg, #14532D 0%, #157F3D 100%);
+  --light-green-banner: #F0FDF4;
+}
+
+
+/* Đảm bảo tiêu đề cố định */
+thead.sticky th {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #00A651; /* Màu nền của thead */
+}
+
+/* Cố định tiêu đề danh mục */
+tr.category-header {
+  position: sticky;
+  top: 48px; /* Chiều cao của thead (12px padding x 2 + 24px content) */
+  z-index: 10;
+  background-color: #00c37e; /* Màu nền của tiêu đề danh mục */
+}
+
+/* File TopNews.css hoặc file CSS tương ứng */
+
+.highlight-news {
+  padding: 0;
+  width: 100%;
+}
+
+/* Container chính của carousel */
+.top-news-carousel-container {
+  width: 100%;
+  position: relative;
+  height: 80vh;
+  overflow: hidden; /* Đảm bảo không có gì tràn ra ngoài */
+}
+
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Bắt đầu từ vị trí ngoài màn hình bên phải */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Kết thúc ở vị trí trung tâm */
+    opacity: 1;
+  }
+}
+
